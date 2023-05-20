@@ -14,6 +14,19 @@
     max-width: 15.5rem;
 }
 
+
+.nav-bar-hamburger {
+    grid-column: 2;
+    display: none;
+    cursor: pointer;
+    color: #495E57;
+    transition: background-color 0.5s;
+  }
+  
+  .nav-bar-hamburger:hover {
+    background-color: #F4CE14;
+  }
+  
 .nav-bar-links{
     grid-column: 3;
     display: flex;
@@ -24,6 +37,11 @@
     padding-inline-start: 0;
     transition: left 0.3s;
 }
+
+.nav-bar-links.expanded {
+    left: 0;
+  }
+  
 
 .nav-bar-links li{
     display: flex;
@@ -47,3 +65,34 @@
     color:#FFFFFF;
     background-color: #495E57;
 }
+
+@media only screen and (max-width: 992px) {
+    .nav-bar {
+      grid-template-columns: auto auto;
+    }
+  
+    .nav-bar-hamburger {
+      width: 2.5rem;
+      justify-self: end;
+      display: inline-block;
+      background: none;
+      border: none;
+    }
+  
+    .nav-bar-links {
+      position: absolute;
+      flex-direction: column;
+      width: 50%;
+      height: 100vh;
+      top: 0;
+      left: -50%;
+      background-color: #FFFFFF;
+      box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+  
+    .nav-bar-links li {
+      flex-direction: column;
+    }
+  }
+  
