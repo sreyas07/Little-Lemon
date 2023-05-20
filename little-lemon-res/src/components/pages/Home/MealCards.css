@@ -54,3 +54,24 @@
 .meal-card-body-footer a{
     font-weight: bold;
 }
+
+/*-- Media queries ------------------------------------------------------*/
+
+@media (max-width: 960px) {
+    .meal-card {
+        align-items: center;
+        grid-column: 1;
+        grid-row: auto;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .meal-card-image img,
+    .meal-card-header,
+    .meal-card-body-footer{
+        width: 250px;
+        align-self: auto;
+        height: fit-content;
+    }
+
+    }

@@ -29,3 +29,35 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+/*-- Media queries ------------------------------------------------------*/
+
+@media (max-width: 915px) {
+    .about-story {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+    
+    .about-section-images {
+      grid-column: 1;
+      flex-direction: row;
+    }
+    
+    .about-section-images img {
+      max-width: 50%;
+    }
+    }
+    
+    @media (max-width: 715px) {
+        .about-story {
+      grid-template-rows: repeat(3, auto);
+    }
+    
+    .about-section-images {
+      flex-direction: column;
+    }
+    
+    .about-section-images img {
+      max-width: 100%;
+    }
+    }
